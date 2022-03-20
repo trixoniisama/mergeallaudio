@@ -8,7 +8,7 @@ $dirlist = scandir($dir);
 unset($dirlist[0]);
 unset($dirlist[1]);
 
-$audiof = array('aac','mka','mp3');
+$audiof = array('aac','mka','opus');
 
 $esc = array('*', '?', '[', ']', '>', '<', '|', ';', '&');
 
@@ -89,7 +89,7 @@ foreach($dirlist as $content)
     	    $new_name = "{$name}_temp{$i}.mkv";
     	    $i++;
         }
-        $exe .= "mv '$new_name' '{$name}.mkv';\n";
+        $exe .= "mv '$new_name' '{$name}_.mkv';\n";
     }
 }
 
